@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "live-server src",
     "build": "npm run create:dist && npm run build:copy && npm run build:compile",
-    "build:copy": "npm run copy:img && npm run copy:feedback && npm run copy:html",
+    "build:copy": "npm run copy:cname && npm run copy:img && npm run copy:feedback && npm run copy:html",
     "build:compile": "npm run compile:css && npm run compile:js",
     "create:dist": "rm -rf docs && mkdir docs",
     "copy:img": "cp -r src/img docs/img",
     "copy:feedback": "cp -r src/feedback.json docs/feedback.json",
+    "copy:cname": "cp -r src/CNAME docs/CNAME",
     "copy:html": "cp -r src/index.html docs/index.html",
     "compile:css": "postcss src/style.css > docs/style.css",
     "compile:js": "terser --compress --mangle -o docs/scripts.js -- src/scripts.js"
