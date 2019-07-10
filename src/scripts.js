@@ -12,7 +12,7 @@ function feedback() {
           return "<p>" + paragraph + "</p>";
         })
         .join(""),
-      '<a href="' + allPhotos + '" class="feedback__link">Все фото ➝</a>',
+      '<a href="' + allPhotos + '" class="feedback__link">All photos ➝</a>',
       '<div class="feedback__nav">',
       '<a href="#" class="feedback_prev">←</a>',
       '<a href="#" class="feedback_next">→</a>',
